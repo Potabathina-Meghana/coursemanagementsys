@@ -1,5 +1,5 @@
 from flask import jsonify, render_template, request, abort, url_for
-from app.models.course import  get_courses, get_course_by_name, add_course, update_course_in_database,course_exists, delete_course
+from main.models.course import  get_courses, get_course_by_name, add_course, update_course_in_database,course_exists, delete_course
 from flask import Blueprint
 
 course_view_api = Blueprint('course_view_api', __name__)
