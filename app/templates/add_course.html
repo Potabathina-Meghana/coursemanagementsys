@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+</head>
+<body>
+    <h1>Add Course</h1>
+    
+    <form method="POST" action="{{ url_for('course_view_api.add_new_course') }}">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" required></textarea><br>
+        <label for="instructor">Instructor:</label><br>
+        <input type="text" id="instructor" name="instructor" required><br>
+        <label for="duration">Duration:</label><br>
+        <input type="text" id="duration" name="duration" required><br>
+        <button type="submit">Add Course</button>
+    </form>
+
+    <a href="{{ url_for('course_view_api.get_all_courses') }}">View All Courses</a>
+</body>
+</html>
