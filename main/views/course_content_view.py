@@ -1,5 +1,5 @@
 # Import necessary modules
-from flask import jsonify, request, abort
+from flask import jsonify, request
 from main.models.course_content import add_course_content, update_course_content, delete_course_content, get_course_content,get_single_course_content
 from flask import Blueprint
 

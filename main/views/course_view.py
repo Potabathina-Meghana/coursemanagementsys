@@ -1,4 +1,4 @@
-from flask import jsonify, render_template, request, abort, url_for
+from flask import jsonify, request, abort
 from main.models.course import  get_courses, get_course_by_name, add_course, update_course_in_database,course_exists, delete_course
 from flask import Blueprint
 
@@ -94,10 +94,6 @@ def delete_existing_course(name):
     else:
         return jsonify({'error': 'Course not found'}), 404
     
-@course_view_api.route('/')
-def index():
-    return 'Welcome to the Course Management System!'
- 
- 
- 
- 
+# @course_view_api.route('/')
+# def index():
+#     return jsonify({"status": "Ok", "message":"rock it"})
